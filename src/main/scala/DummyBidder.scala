@@ -20,6 +20,7 @@ class DummyBidder extends SimpleRoutingApp {
       path("bidresponse") {
         post {
           complete {
+            println(s"Get request!!!")
             bidResponse.replaceAll("\\$price", price.toString)
           }
         }
