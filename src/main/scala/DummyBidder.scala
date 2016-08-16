@@ -16,7 +16,7 @@ class DummyBidder extends SimpleRoutingApp {
   val bidResponse = BidderUtil.readFile("bid_response.json")
 
   def start(port: Int, price: Float) = {
-    startServer(interface = "localhost", port = port) {
+    startServer(interface = "0.0.0.0", port = port) {
       path("bidresponse") {
         post {
           complete {
