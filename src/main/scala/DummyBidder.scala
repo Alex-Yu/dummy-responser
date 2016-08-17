@@ -19,9 +19,9 @@ class DummyBidder extends SimpleRoutingApp  {
   def start(port: Int, price: => Float) = {
     startServer(interface = "0.0.0.0", port = port) {
       path("bidresponse") {
-        post {
+        post { ctx =>
           complete {
-            logger.debug(s"Get request!!!")
+            logger.debug(s"===> ${ctx.request.entity.asString}")
             bidResponse.replaceAll("\\$price", price.toString)
           }
         }
