@@ -6,6 +6,8 @@ import spray.routing.SimpleRoutingApp
 import spray.httpx.marshalling.ToResponseMarshallable.isMarshallable
 import spray.routing.Directive.pimpApply
 
+import scala.util.Random
+
 object DummyBidder extends App {
     new DummyBidder().start(8090, 5.5f)
 }
@@ -13,7 +15,7 @@ object DummyBidder extends App {
 class DummyBidder extends SimpleRoutingApp  {
   implicit val system = ActorSystem("my-system")
   val logger = Logger(LoggerFactory.getLogger(this.getClass))
-
+  val r = Random
   val bidResponse = BidderUtil.readFile("bid_response.json")
 
   def start(port: Int, price: => Float) = {
@@ -22,7 +24,10 @@ class DummyBidder extends SimpleRoutingApp  {
         post { ctx =>
           ctx.complete {
             logger.debug(s"===> ${ctx.request.entity.asString}")
-            bidResponse.replaceAll("\\$price", price.toString)
+            if (r.nextBoolean()) bidResponse.replaceAll("\\$price", price.toString)
+            else {
+              respondWithStatus(StatusCodes.NoContent)
+            }
           }
         }
       }
