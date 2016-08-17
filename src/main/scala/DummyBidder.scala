@@ -12,7 +12,7 @@ object DummyBidder extends App {
 
 class DummyBidder extends SimpleRoutingApp  {
   implicit val system = ActorSystem("my-system")
-  val logger = Logger(LoggerFactory.getLogger("mainLog"))
+  val logger = Logger(LoggerFactory.getLogger(this.getClass))
 
   val bidResponse = BidderUtil.readFile("bid_response.json")
 
