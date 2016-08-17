@@ -27,6 +27,7 @@ class DummyBidder extends SimpleRoutingApp  {
             if (r.nextBoolean()) bidResponse.replaceAll("\\$price", price.toString)
             else {
               respondWithStatus(StatusCodes.NoContent)
+              ""
             }
           }
         }
