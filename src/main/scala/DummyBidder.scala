@@ -21,7 +21,8 @@ class DummyBidder extends SimpleRoutingApp  {
       path("bidresponse") {
         post { ctx =>
           complete {
-            logger.debug(s"===> ${ctx.request.entity.asString}")
+            println(ctx.request.entity.asString)
+//            logger.debug(s"===> ${ctx.request.entity.asString}")
             bidResponse.replaceAll("\\$price", price.toString)
           }
         }
