@@ -26,6 +26,7 @@ class DummyBidder extends SimpleRoutingApp  {
   val r = Random
   val bidResponse = BidderUtil.readFile("bid_response_real.json")
   def getPrice = r.nextFloat() * 100
+  def getDelay = r.nextInt(400) + 100
 
   def start(port: Int) = {
     startServer(interface = "0.0.0.0", port = port) {
@@ -33,6 +34,7 @@ class DummyBidder extends SimpleRoutingApp  {
         post { ctx =>
           ctx.complete {
             logger.debug(s"===> ${ctx.request.entity.asString}")
+            Thread.sleep(getDelay)
             if (r.nextBoolean()) bidResponse.replaceAll("\\$price", getPrice.toString)
             else {
               respondWithStatus(StatusCodes.NoContent)
