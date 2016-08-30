@@ -33,11 +33,17 @@ class DummyBidder extends SimpleRoutingApp  {
       path("bidresponse") {
         post { ctx =>
           ctx.complete {
-            logger.debug(s"===> ${ctx.request.entity.asString}")
-            Thread.sleep(getDelay)
-            if (r.nextBoolean()) bidResponse.replaceAll("\\$price", getPrice.toString)
+            logger.debug(s"<=== ${ctx.request.entity.asString}")
+            val delay = getDelay
+            Thread.sleep(delay)
+            if (r.nextBoolean()) {
+              val result = bidResponse.replaceAll("\\$price", getPrice.toString)
+              logger.debug(s"===> after $delay ms: $result")
+              result
+            }
             else {
               respondWithStatus(StatusCodes.NoContent)
+              logger.debug(s"===> after $delay ms: NoContent")
               ""
             }
           }
