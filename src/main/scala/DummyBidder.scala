@@ -7,6 +7,7 @@ import spray.routing.SimpleRoutingApp
 import scala.concurrent.duration._
 import scala.io.StdIn
 import scala.util.Random
+import scala.concurrent.ExecutionContext.Implicits.global
 
 object DummyBidder extends App {
 
