@@ -1,7 +1,6 @@
 import akka.actor.ActorSystem
 import com.typesafe.scalalogging.Logger
 import org.slf4j.LoggerFactory
-import spray.can.client.HttpHostConnector.RequestContext
 import spray.http.StatusCodes
 import spray.routing.Directive.pimpApply
 import spray.routing.SimpleRoutingApp
