@@ -1,6 +1,7 @@
 import akka.actor.ActorSystem
 import com.typesafe.scalalogging.Logger
 import org.slf4j.LoggerFactory
+import spray.can.client.HttpHostConnector.RequestContext
 import spray.http.StatusCodes
 import spray.routing.Directive.pimpApply
 import spray.routing.SimpleRoutingApp
@@ -24,14 +25,14 @@ class DummyBidder extends SimpleRoutingApp  {
   implicit val system = ActorSystem("my-system")
   val logger = Logger(LoggerFactory.getLogger(this.getClass))
   val r = Random
-  val bidResponse = BidderUtil.readFile("bid_response_real.json")
+  val bidResponse = BidderUtil.readFile("bid_response.json")
   def getPrice = r.nextFloat() * 100
   def getDelay = r.nextInt(400) + 100
 
   def start(port: Int) = {
     startServer(interface = "0.0.0.0", port = port) {
       path("bidresponse") {
-        post { ctx =>
+        (post | get) { ctx =>
           ctx.complete {
             logger.debug(s"<=== ${ctx.request.entity.asString}")
             val delay = getDelay
