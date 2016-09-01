@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory
 import spray.http.StatusCodes
 import spray.routing.Directive.pimpApply
 import spray.routing.SimpleRoutingApp
-
+import scala.concurrent.duration._
 import scala.io.StdIn
 import scala.util.Random
 
@@ -28,23 +28,28 @@ class DummyBidder extends SimpleRoutingApp  {
   def getPrice = r.nextFloat() * 100
   def getDelay = r.nextInt(400) + 100
 
+  def in[U](duration: FiniteDuration)(body: => U): Unit =
+    system.scheduler.scheduleOnce(duration)(body)
+
   def start(port: Int) = {
     startServer(interface = "0.0.0.0", port = port) {
       path("bidresponse") {
-        (post | get) { ctx =>
-          ctx.complete {
-            logger.debug(s"<=== ${ctx.request.entity.asString}")
-            val delay = getDelay
-//            Thread.sleep(delay)
-            if (r.nextBoolean()) {
-              val result = bidResponse.replaceAll("\\$price", getPrice.toString)
-              logger.debug(s"===> after $delay ms: $result")
-              result
-            }
-            else {
-              respondWithStatus(StatusCodes.NoContent)
-              logger.debug(s"===> after $delay ms: NoContent")
-              ""
+        post { ctx =>
+          val delay = getDelay
+          in(delay millisecond) {
+            ctx.complete {
+              logger.debug(s"<=== ${ctx.request.entity.asString}")
+
+              if (r.nextBoolean()) {
+                val result = bidResponse.replaceAll("\\$price", getPrice.toString)
+                logger.debug(s"===> after $delay ms: $result")
+                result
+              }
+              else {
+                respondWithStatus(StatusCodes.NoContent)
+                logger.debug(s"===> after $delay ms: NoContent")
+                ""
+              }
             }
           }
         }
