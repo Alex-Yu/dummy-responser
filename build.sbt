@@ -1,3 +1,4 @@
+
 organization  := "com.example"
 
 version       := "0.1"
@@ -20,5 +21,11 @@ libraryDependencies ++= {
     "com.typesafe.scala-logging"  %% "scala-logging"    % "3.4.0"
   )
 }
+
+javaOptions in run ++= Seq(
+  "-Dcom.sun.management.jmxremote.port=1032",
+  "-Dcom.sun.management.jmxremote.authenticate=false",
+  "-Dcom.sun.management.jmxremote.ssl=false"
+)
 
 Revolver.settings
