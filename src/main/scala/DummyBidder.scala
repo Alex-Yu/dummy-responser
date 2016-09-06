@@ -26,8 +26,13 @@ class DummyBidder extends SimpleRoutingApp  {
   val logger = Logger(LoggerFactory.getLogger(this.getClass))
   val r = Random
   val bidResponse = BidderUtil.readFile("bid_response_real.json")
+
   def getPrice = r.nextFloat() * 100
+
   def getDelay = r.nextInt(400) + 100
+
+  def hasBid(share: Int = 50) =
+    share > 0 && r.nextInt(101) <= share
 
   def in[U](duration: FiniteDuration)(body: => U): Unit =
     system.scheduler.scheduleOnce(duration)(body)
@@ -41,7 +46,7 @@ class DummyBidder extends SimpleRoutingApp  {
             ctx.complete {
               logger.debug(s"<=== ${ctx.request.entity.asString}")
 
-              if (r.nextBoolean()) {
+              if (hasBid(5)) {
                 val result = bidResponse.replaceAll("\\$price", getPrice.toString)
                 logger.debug(s"===> after $delay ms: $result")
                 result
