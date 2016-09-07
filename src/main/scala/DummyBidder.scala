@@ -27,7 +27,7 @@ class DummyBidder extends SimpleRoutingApp  {
   val r = Random
   val bidResponse = BidderUtil.readFile("bid_response_real.json")
 
-  def getPrice = r.nextFloat() * 100
+  def getPrice = (r.nextFloat() + 1) * 100  // +1 to avoid bids less than floor
 
   def getDelay = r.nextInt(400) + 100
 
