@@ -25,7 +25,7 @@ class DummyBidder extends SimpleRoutingApp  {
   implicit val system = ActorSystem("my-system")
   val logger = Logger(LoggerFactory.getLogger(this.getClass))
   val r = Random
-  val bidResponse = BidderUtil.readFile("bid_response_real.json")
+  val bidResponse = BidderUtil.readFile("bid_response_real_2.json")
 
   def getPrice = (r.nextFloat() + 1) * 100  // +1 to avoid bids less than floor
 

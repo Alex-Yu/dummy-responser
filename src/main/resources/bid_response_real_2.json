@@ -1,0 +1,24 @@
+{
+  "cur": "USD",
+  "id": "f4dc7fb5-cd18-4e16-976c-9cfe2322390e",
+  "bidid": "somefakebidid",
+  "seatbid": [
+    {
+      "bid": [
+        {
+          "adm": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><VAST version=\"2.0\"><Ad id=\"1478620026.2009955\"><InLine><AdSystem>Vertamedia</AdSystem><AdTitle>640x480.mp4</AdTitle><Description></Description><Error><![CDATA[//direct-ads.vertamedia.com/event?event=error&adid=1478620026.2009955&cmpid=18683]]></Error><Impression><![CDATA[//direct-ads.vertamedia.com/event?event=impression&adid=1478620026.2009955&cmpid=18683]]></Impression><Creatives><Creative AdID=\"1478620026.2009955\"><Linear><TrackingEvents><Tracking event=\"creativeView\"><![CDATA[//direct-ads.vertamedia.com/event?event=creativeView&adid=1478620026.2009955&cmpid=18683]]></Tracking><Tracking event=\"start\"><![CDATA[//direct-ads.vertamedia.com/event?event=start&adid=1478620026.2009955&cmpid=18683]]></Tracking><Tracking event=\"midpoint\"><![CDATA[//direct-ads.vertamedia.com/event?event=midpoint&adid=1478620026.2009955&cmpid=18683]]></Tracking><Tracking event=\"firstQuartile\"><![CDATA[//direct-ads.vertamedia.com/event?event=firstQuartile&adid=1478620026.2009955&cmpid=18683]]></Tracking><Tracking event=\"thirdQuartile\"><![CDATA[//direct-ads.vertamedia.com/event?event=thirdQuartile&adid=1478620026.2009955&cmpid=18683]]></Tracking><Tracking event=\"complete\"><![CDATA[//direct-ads.vertamedia.com/event?event=complete&adid=1478620026.2009955&cmpid=18683]]></Tracking></TrackingEvents><VideoClicks><ClickThrough><![CDATA[http://test.com]]></ClickThrough><ClickTracking><![CDATA[//direct-ads.vertamedia.com/event?event=click&adid=1478620026.2009955&cmpid=18683]]></ClickTracking></VideoClicks><MediaFiles><MediaFile delivery=\"progressive\" type=\"video/mp4\" width=\"480\" scalable=\"true\" maintainAspectRatio=\"true\"><![CDATA[http://public3cdn1.videe.tv/20262/581c98bb73a9e141082575.mp4]]></MediaFile></MediaFiles></Linear></Creative></Creatives></InLine></Ad></VAST>",
+          "adomain": [
+            "kanoodle.com"
+          ],
+          "attr": [],
+          "cid": "smartyads_bidder_ybrant_tag_us_43537",
+          "crid": "smartyads_0",
+          "id": "smartyads_111ea85861e2d5decf1ad4974e00738e",
+          "impid": "1",
+          "price": $price
+        }
+      ],
+      "seat": "falk"
+    }
+  ]
+}
