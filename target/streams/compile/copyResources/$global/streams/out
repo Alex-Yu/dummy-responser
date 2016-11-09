@@ -1,0 +1,5 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/root/dummy-responser/src/main/resources/logback.xml,/root/dummy-responser/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/root/dummy-responser/src/main/resources/application.conf,/root/dummy-responser/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/root/dummy-responser/src/main/resources/bid_response_real.json,/root/dummy-responser/target/scala-2.11/classes/bid_response_real.json)[0m
+[0m[[0mdebug[0m] [0m	(/root/dummy-responser/src/main/resources/bid_response.json,/root/dummy-responser/target/scala-2.11/classes/bid_response.json)[0m

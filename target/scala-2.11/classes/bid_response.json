@@ -1,0 +1,24 @@
+{
+  "cur": "USD",
+  "id": "f4dc7fb5-cd18-4e16-976c-9cfe2322390e",
+  "bidid": "somefakebidid",
+  "seatbid": [
+    {
+      "bid": [
+        {
+          "adm": "fake",
+          "adomain": [
+            "kanoodle.com"
+          ],
+          "attr": [],
+          "cid": "smartyads_bidder_ybrant_tag_us_43537",
+          "crid": "smartyads_0",
+          "id": "smartyads_111ea85861e2d5decf1ad4974e00738e",
+          "impid": "1",
+          "price": $price
+        }
+      ],
+      "seat": "falk"
+    }
+  ]
+}

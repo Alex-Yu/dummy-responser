@@ -1,0 +1,24 @@
+{
+  "cur": "USD",
+  "id": "f4dc7fb5-cd18-4e16-976c-9cfe2322390e",
+  "bidid": "somefakebidid",
+  "seatbid": [
+    {
+      "bid": [
+        {
+          "adm": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><VAST xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" version=\"2.0\" xsi:noNamespaceSchemaLocation=\"oxml.xsd\"><Ad id=\"1085\"><InLine><AdSystem version=\"1.0\">Adap.tv</AdSystem><AdTitle><![CDATA[Adap.tv Ad Unit]]></AdTitle><Impression><![CDATA[http://88.214.193.87/?t=winv&b=${AUCTION_PRICE}&ob=5.016&cd=111ea85861e2d5decf1ad4974e00738e]]></Impression><Impression><![CDATA[http://rtb.smartyads.com/rtb/video.php?auction=${AUCTION_ID}&price=5.016&impid=${AUCTION_IMP_ID}&name=smarty]]></Impression><Creatives><Creative><Linear><Duration><![CDATA[00:00:30]]></Duration><MediaFiles><MediaFile delivery=\"progressive\" width=\"400\" height=\"300\" type=\"application/x-shockwave-flash\" apiFramework=\"VPAID\"><![CDATA[https://redir.adap.tv/redir/client/VPAIDClient.swf?adTagUrl=https://ads.adaptv.advertising.com/a/h/qVlKdVx6U_T3L3h7WH8gdnz5iZqF _dGxJPBon1ikAg=?cb=MT6LZ8&pageUrl=http://examiner.com/&description=VIDEO_DESCRIPTION&duration=VIDEO_DURATION&id=VIDEO_ID&keywords=VIDEO_KEYWORDS&title=VIDEO_TITLE&url=VIDEO_URL&eov=eov&a.cluster=0&a.pvt=0&companionId=&cpmPassback=&placementId=531533&orgId=2270&injectCompanionDummy=&pauseOnClick=&d.vw=&d.app=]]></MediaFile></MediaFiles><VideoClicks><ClickTracking id=\"click\"><![CDATA[http://rtb.smartyads.com/rtb/click.php?auction=${AUCTION_ID}]]></ClickTracking></VideoClicks></Linear></Creative><Creative><CompanionAds><Companion width=\"300\" height=\"250\"><HTMLResource><![CDATA[<div id=\"adaptvCompanion300x250\" style=\"display:none;\"></div>]]></HTMLResource></Companion><Companion width=\"300\" height=\"60\"><HTMLResource><![CDATA[<div id=\"adaptvCompanion300x60\" style=\"display:none;\"></div>]]></HTMLResource></Companion><Companion width=\"300\" height=\"100\"><HTMLResource><![CDATA[<div id=\"adaptvCompanion300x100\" style=\"display:none;\"></div>]]></HTMLResource></Companion><Companion width=\"468\" height=\"60\"><HTMLResource><![CDATA[<div id=\"adaptvCompanion468x60\" style=\"display:none;\"></div>]]></HTMLResource></Companion><Companion width=\"728\" height=\"90\"><HTMLResource><![CDATA[<div id=\"adaptvCompanion728x90\" style=\"display:none;\"></div>]]></HTMLResource></Companion></CompanionAds></Creative></Creatives><Extensions></Extensions></InLine></Ad></VAST>",
+          "adomain": [
+            "kanoodle.com"
+          ],
+          "attr": [],
+          "cid": "smartyads_bidder_ybrant_tag_us_43537",
+          "crid": "smartyads_0",
+          "id": "smartyads_111ea85861e2d5decf1ad4974e00738e",
+          "impid": "1",
+          "price": $price
+        }
+      ],
+      "seat": "falk"
+    }
+  ]
+}
