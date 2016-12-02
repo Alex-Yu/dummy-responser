@@ -22,6 +22,8 @@ libraryDependencies ++= {
   )
 }
 
+assemblyJarName in assembly := "dummy-bidder.jar"
+
 javaOptions in run ++= Seq(
   "-Dcom.sun.management.jmxremote.port=1032",
   "-Dcom.sun.management.jmxremote.authenticate=false",
