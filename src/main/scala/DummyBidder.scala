@@ -18,7 +18,7 @@ object DummyBidder extends App {
   }.getOrElse(5)
   val delay = Try {
     args(2).toInt
-  }.map(Some(_)).getOrElse(None)
+  }.toOption
 
  /* println("Enter number of virtual bidders")
   val count = StdIn.readInt()
